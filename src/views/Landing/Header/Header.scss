@@ -1,0 +1,377 @@
+@import '../../../styles/mixins';
+
+.header {
+	.cta-container {
+		display: flex;
+		justify-content: space-between;
+		// margin: 15px 55px 125px 6%;
+		margin: 15px auto 125px auto;
+		width: 90%;
+		max-width: 1500px;
+		@media #{$tablet} {
+			flex-direction: column-reverse;
+			margin: 0 auto;
+		}
+		img {
+			max-width: 47%;
+			object-fit: contain;
+			@media #{$tablet} {
+				margin: 0 auto;
+				max-width: 60%;
+				margin-top: 30px;
+			}
+			@media #{$mobile} {
+				max-width: 80%;
+			}
+		}
+		.cta {
+			max-width: 47%;
+			max-height: 33%;
+			text-align: left;
+			margin: 35px;
+			@media #{$tablet} {
+				max-width: 100%;
+				text-align: center;
+				margin: 20px;
+			}
+
+			.cta-title {
+				text-align: left;
+				margin-top: 110px;
+				font-size: 40px;
+				font-weight: 500;
+				letter-spacing: 0.06em;
+				line-height: 1.4;
+				color: $chillFi-purple;
+				height: auto;
+
+				@media #{$tablet} {
+					// border: 1px solid red;
+					display: none;
+					margin: 0 auto;
+					max-width: 100%;
+					text-align: center;
+				}
+			}
+			.cta-title-tablet {
+				display: none;
+				text-align: left;
+				margin-top: 110px;
+				font-size: 40px;
+				font-weight: 500;
+				letter-spacing: 0.06em;
+				line-height: 1.4;
+				color: $chillFi-purple;
+
+				@media #{$tablet} {
+					// border: 1px solid red;
+					display: block;
+					margin: 0 auto;
+					text-align: center;
+				}
+				@media #{$tablet-small} {
+					font-size: 26px;
+				}
+				@media #{$mobile} {
+					font-size: 18px;
+				}
+			}
+
+			p {
+				margin: 3% 0 0 0;
+				font-size: 24px;
+				letter-spacing: 0.12em;
+				line-height: 1.8;
+				color: $erudite-purple;
+
+				@media #{$tablet} {
+					max-width: 100%;
+					margin: 10px 0;
+				}
+				@media #{$tablet-small} {
+					font-size: 20px;
+				}
+				@media #{$mobile} {
+					font-size: 11px;
+				}
+			}
+			button {
+				@include buttonStyler($chillFi-purple, $snow-white, none);
+				margin-top: 29px;
+				font-size: 24px;
+				padding: 1rem 1.8rem;
+				width: 270px;
+				@media #{$mobile} {
+					width: 200px;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.values {
+		margin-bottom: 5.5%;
+		width: 100%;
+		@media #{$mobile} {
+			display: none;
+		}
+
+		p {
+			color: $machiavellian;
+			font-size: 1.6rem;
+			font-weight: 500;
+			letter-spacing: 0.13em;
+			text-align: center;
+		}
+		.value-tiles {
+			display: flex;
+			width: 100%;
+			max-width: 1500px;
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 5rem;
+			padding-top: 1.25rem;
+			@media #{$tablet} {
+				width: 100%;
+			}
+
+			div {
+				margin-top: 45px;
+				border-radius: 0rem;
+				padding: 1.2rem 1.2rem;
+				letter-spacing: 0.08em;
+				color: $snow-white;
+				width: calc(100% / 6);
+				text-align: center;
+				@media #{$tablet} {
+					border-radius: 0;
+					width: calc(100% / 6);
+					letter-spacing: 0.06em;
+					font-size: 1.4rem;
+					padding: 1.2rem 0.5rem;
+				}
+				span {
+					font-size: 1.6rem;
+					@media #{$tablet} {
+						font-size: 1.4rem;
+					}
+					@media #{$mobile} {
+						font-size: 1.2rem;
+					}
+				}
+			}
+			.tenacity {
+				background: $ruby-enchantment;
+			}
+			.ingenuity {
+				background: $pikachu;
+			}
+			.growth {
+				background: $luigi;
+			}
+			.diligence {
+				background: $mutant-turtle;
+			}
+			.resilience {
+				background: $mocha;
+			}
+			.compassion {
+				background: $scampi;
+			}
+		}
+	}
+	.what-we-do {
+		padding: 30px 0;
+		background-image: url('../assets/LandingPage/GreyRectangle.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: repeat;
+		@media #{$tablet} {
+			background-image: url('../assets/LandingPage/ConfettiMedium.png');
+		}
+		@media #{$tablet-small} {
+			background-image: url('../assets/LandingPage/ConfettiSmall.png');
+		}
+		@media #{$mobile} {
+			background-image: url('../assets/LandingPage/ConfettiMobile.png');
+			background-position: 30% 70%;
+		}
+		h2 {
+			text-align: center;
+			letter-spacing: 0.13em;
+			@media #{$tablet} {
+				font-size: 3.4rem;
+			}
+			@media #{$mobile} {
+				font-size: 3.2rem;
+			}
+		}
+		.learn-more-container {
+			margin-top: 58px;
+			max-width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			max-width: 1500px;
+			margin: 58px auto 0 auto;
+			@media #{$mobile} {
+				flex-direction: column;
+			}
+			img {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				margin-bottom: 50px;
+				@media #{$tablet-small} {
+					margin-bottom: 20px;
+					width: 130px;
+					height: 130px;
+				}
+				@media #{$mobile} {
+					margin-bottom: 20px;
+					width: 200px;
+					height: 200px;
+				}
+			}
+			.crowdFunding,
+			.opportunities,
+			.pathways {
+				position: relative;
+				display: inline-block;
+				text-align: center;
+				margin-bottom: 20px;
+				transition: all 5s ease-in-out;
+
+				p {
+					color: #000;
+				}
+
+				.toolTip {
+					margin: 1rem auto 0 auto;
+					display: none;
+					position: absolute;
+					width: 27rem;
+					text-align: left;
+					// background-color: $franks-grey;
+					background-color: $chillFi-purple;
+					color: #fff;
+					z-index: 100;
+					// border: 1px solid $black-void;
+					border-radius: 5px;
+					margin-left: -2.5rem;
+					padding: 7.5px 12.5px;
+					cursor: default;
+
+					@media #{$tablet-small} {
+						width: 20rem;
+						font-size: 1.55rem;
+						margin-left: -1rem;
+					}
+					@media #{$mobile} {
+						margin-left: 14rem;
+					}
+				}
+
+				h3 {
+					font-size: 23px;
+					letter-spacing: 0.03em;
+					margin-bottom: 26px;
+					@media #{$tablet-small} {
+						padding: 0px 8px;
+						font-size: 18px;
+						letter-spacing: 0.02em;
+					}
+				}
+				a {
+					pointer-events: none;
+					cursor: default;
+					font-size: 22px;
+					font-weight: 500;
+					text-decoration: none;
+					color: $chillFi-purple;
+					@media #{$tablet-small} {
+						font-size: 17px;
+					}
+				}
+			}
+
+			.opportunities .toolTip {
+				margin-left: 0.35rem;
+				@media #{$tablet-small} {
+					margin-left: 0.9rem;
+				}
+				@media #{$mobile} {
+					margin-left: 14rem;
+				}
+			}
+
+			.crowdFunding:hover .toolTip,
+			.opportunities:hover .toolTip,
+			.pathways:hover .toolTip {
+				cursor: pointer;
+				display: block;
+			}
+
+			div {
+				display: flex;
+				justify-content: center;
+				p {
+					color: $snow-white;
+					position: absolute;
+					align-self: center;
+					font-weight: 1.4;
+					font-size: 2.1rem;
+				}
+				.donate-text {
+					color: $black-void;
+				}
+			}
+			.hovered {
+				display: block;
+			}
+		}
+	}
+}
+
+.dark-mode {
+	.cta-container {
+		.cta {
+			.cta-title {
+				color: $dark-electric-blue;
+			}
+			p {
+				color: $maastricht-blue;
+			}
+			button {
+				background-color: $maastricht-blue;
+				color: $snow-white;
+				&:hover {
+					background-color: $scampi;
+					color: $maastricht-blue;
+					mix-blend-mode: color-dodge;
+				}
+			}
+		}
+	}
+	.values {
+		p {
+			color: $abatross;
+		}
+		.value-tiles {
+			div {
+				color: $machiavellian;
+			}
+		}
+	}
+	.what-we-do {
+		background-image: none;
+		background-color: $police-blue;
+		.learn-more-container {
+			.crowdFunding,
+			.opportunities,
+			.pathways {
+				a {
+					color: $saphire-mox;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@import '../../../styles/mixins';
+
+.featured-projects-container {
+	margin: 150px auto 100px auto;
+	width: 95%;
+
+	max-width: 1500px;
+	@media #{$tablet} {
+		margin: 75px auto 75px auto;
+	}
+	@media #{$tablet-small} {
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 45px;
+	}
+
+	.featured-projects-list {
+		display: flex;
+		justify-content: space-between;
+		@media #{$tablet-small} {
+			flex-direction: column;
+		}
+	}
+	h2 {
+		line-height: 1;
+		letter-spacing: 0.06em;
+		margin-bottom: 35px;
+	}
+}
+
+.dark-mode {
+	.FPContainer {
+		.card {
+			&:hover {
+				color: $maastricht-blue;
+			}
+		}
+	}
+}
